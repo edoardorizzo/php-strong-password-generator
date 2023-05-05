@@ -3,6 +3,7 @@ Dobbiamo creare una pagina che permetta ai nostri utenti di utilizzare il nostro
 
 Creare un form che invii in GET la lunghezza della password. Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente. Scriviamo tutto (logica e layout) in un unico file index.php -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,19 +24,6 @@ Creare un form che invii in GET la lunghezza della password. Una nostra funzione
 
 <?php
 
-//echo $_GET['number'];
-
-function randomPassword() {
-    $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-    $pass = array(); //remember to declare $pass as an array
-    $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
-    for ($i = 0; $i < $_GET['number']; $i++) {
-        $n = rand(0, $alphaLength);
-        $pass[] = $alphabet[$n];
-    }
-    return implode($pass); //turn the array into a string
-}
-
-echo randomPassword();
+include './functions.php'
 
 ?>
