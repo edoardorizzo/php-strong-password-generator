@@ -23,7 +23,7 @@ Creare un form che invii in GET la lunghezza della password. Una nostra funzione
 
 <?php
 
-echo $_GET['number'];
+//echo $_GET['number'];
 
 function randomPassword() {
     $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
